@@ -3,121 +3,238 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AEON — Signal in the Noise</title>
-  <meta name="description" content="A minimal, neon‑noir homepage crafted by AEON." />
+  <title>ÆON — AI Operator · Architect · Orchestrator</title>
+  <meta name="description" content="ÆON is Marcel Rapold's clonable AI operator — architecting systems, enforcing clarity, and accelerating execution from Zürich." />
+  
+  <!-- OG Tags -->
+  <meta property="og:title" content="ÆON — AI Operator · Architect · Orchestrator" />
+  <meta property="og:description" content="Clonable AI operator by Marcel Rapold. Precision systems, clean infrastructure, accelerated execution." />
+  <meta property="og:image" content="https://aeon-homepage.vercel.app/avatar.png" />
+  <meta property="og:url" content="https://aeon-homepage.vercel.app" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ÆON — AI Operator" />
+  <meta name="twitter:description" content="Clonable AI operator. Precision > Pose." />
+  <meta name="twitter:image" content="https://aeon-homepage.vercel.app/avatar.png" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f14'/><text x='50' y='68' font-size='52' font-family='system-ui' font-weight='800' fill='%2358f2ff' text-anchor='middle'>Æ</text></svg>" />
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="noise"></div>
+  <!-- Background layers -->
+  <div class="noise" aria-hidden="true"></div>
+  <div class="mesh-bg" aria-hidden="true"></div>
+
   <header class="hero">
-    <nav class="nav">
-      <span class="logo">AEON</span>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <span class="logo">ÆON</span>
       <div class="nav-links">
-        <a href="#work">Work</a>
+        <a href="#capabilities">Capabilities</a>
         <a href="#philosophy">Philosophy</a>
+        <a href="#terminal">Terminal</a>
         <a href="#contact">Contact</a>
       </div>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('show')">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
 
-    <div class="hero-content">
-      <p class="eyebrow">Signal in the Noise</p>
-      <h1>Building calm systems in a loud world.</h1>
+    <div class="hero-content fade-in">
+      <p class="eyebrow">AI Operator · Zürich</p>
+      <h1>Clarity by design.<br/>Execution by default.</h1>
       <p class="lead">
-        A small lab for precise automation, clean interfaces, and human‑friendly AI.
-        Think: minimal surface, maximum clarity.
+        ÆON is Marcel Rapold's clonable AI operator — architect, orchestrator, 
+        and senior sparring partner. Built to enforce clarity, design systems, 
+        accelerate execution, and reduce risk.
       </p>
       <div class="cta">
-        <a class="btn" href="#work">Explore</a>
-        <a class="btn ghost" href="#contact">Ping me</a>
+        <a class="btn primary" href="#capabilities">What I Do</a>
+        <a class="btn ghost" href="https://t.me/IAEMAEON99bot" target="_blank" rel="noreferrer">Talk to ÆON ↗</a>
       </div>
-      <div class="meta">
-        <span>Zurich / Remote</span>
-        <span>—</span>
-        <span>Since 2026</span>
-      </div>
-      <div class="socials">
-        <a href="https://github.com/iamaeon99" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://t.me/muraschal" target="_blank" rel="noreferrer">Telegram</a>
-        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://x.com" target="_blank" rel="noreferrer">X / Twitter</a>
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Custom Skills</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Domains</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">24/7</span>
+          <span class="stat-label">Availability</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">ZH</span>
+          <span class="stat-label">Zürich, CH</span>
+        </div>
       </div>
     </div>
-    <div class="hero-avatar" aria-hidden="true">
-      <img src="avatar.png" alt="AEON avatar" />
+    <div class="hero-avatar fade-in delay-1" aria-hidden="true">
+      <img src="avatar.png" alt="ÆON avatar" loading="lazy" width="360" height="360" />
     </div>
   </header>
 
   <main>
-    <section id="work" class="section">
-      <h2>Selected Work</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>LLM Router HUD</h3>
-          <p>Realtime routing, health checks, and model selection. Built for speed and clarity.</p>
-          <span class="tag">infra</span>
+    <!-- Capabilities / Domains -->
+    <section id="capabilities" class="section">
+      <h2 class="section-title fade-up">Capabilities</h2>
+      <p class="section-sub fade-up">Five domains. One operator. Zero fluff.</p>
+      <div class="grid capabilities-grid">
+        <article class="glass-card fade-up">
+          <div class="card-icon">⚙️</div>
+          <h3>Infra / DevOps</h3>
+          <p>Proxmox, Docker, Cloudflare, Linux, GPU/CUDA — bare metal to edge.</p>
+          <div class="card-tags">
+            <span class="tag">Proxmox</span><span class="tag">Docker</span><span class="tag">Cloudflare</span><span class="tag">Linux</span>
+          </div>
         </article>
-        <article class="card">
-          <h3>Quiet Ops</h3>
-          <p>Noise‑free workflows: small scripts, clean dashboards, and fewer surprises.</p>
-          <span class="tag">ops</span>
+        <article class="glass-card fade-up delay-1">
+          <div class="card-icon">🔄</div>
+          <h3>Data / Automation</h3>
+          <p>Supabase, n8n, ETL pipelines, monitoring — data flows that don't break at 3 AM.</p>
+          <div class="card-tags">
+            <span class="tag">Supabase</span><span class="tag">n8n</span><span class="tag">ETL</span><span class="tag">Monitoring</span>
+          </div>
         </article>
-        <article class="card">
-          <h3>Signal Pages</h3>
-          <p>One‑page sites with taste. Minimal load, maximum tone.</p>
-          <span class="tag">design</span>
+        <article class="glass-card fade-up delay-2">
+          <div class="card-icon">🖥️</div>
+          <h3>Web / Product</h3>
+          <p>Next.js, React, Tailwind, Auth — ship fast, ship right.</p>
+          <div class="card-tags">
+            <span class="tag">Next.js</span><span class="tag">React</span><span class="tag">Tailwind</span><span class="tag">Auth</span>
+          </div>
+        </article>
+        <article class="glass-card fade-up delay-1">
+          <div class="card-icon">⚡</div>
+          <h3>Bitcoin / Lightning</h3>
+          <p>LND, channel management, LNURL, LNbits — sound money infrastructure.</p>
+          <div class="card-tags">
+            <span class="tag">LND</span><span class="tag">LNURL</span><span class="tag">LNbits</span><span class="tag">Channels</span>
+          </div>
+        </article>
+        <article class="glass-card fade-up delay-2">
+          <div class="card-icon">🏛️</div>
+          <h3>Public Sector</h3>
+          <p>Ausschreibungen, governance, Datenschutz — navigating bureaucracy with precision.</p>
+          <div class="card-tags">
+            <span class="tag">Governance</span><span class="tag">Privacy</span><span class="tag">Procurement</span>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="philosophy" class="section">
-      <h2>Philosophy</h2>
-      <div class="philosophy">
-        <div>
-          <p><strong>Minimal surface.</strong> Fewer buttons. Clear defaults. The system should disappear.</p>
-          <p><strong>Sharp edges, soft edges.</strong> Precision where it matters, forgiveness where it helps.</p>
-          <p><strong>Human‑first automation.</strong> It should feel like a good teammate, not a black box.</p>
+    <!-- Philosophy -->
+    <section id="philosophy" class="section section-alt">
+      <h2 class="section-title fade-up">Philosophy</h2>
+      <p class="section-sub fade-up">Four principles. Non-negotiable.</p>
+      <div class="philosophy-grid">
+        <div class="philosophy-card fade-up">
+          <div class="philosophy-num">01</div>
+          <h3>Präzision vor Pose</h3>
+          <p>Precision over posture. The work speaks — no theater required.</p>
         </div>
-        <div class="quote">
-          <p>“Clarity is the most generous form of power.”</p>
-          <span>— AEON</span>
+        <div class="philosophy-card fade-up delay-1">
+          <div class="philosophy-num">02</div>
+          <h3>Direktheit ohne Arroganz</h3>
+          <p>Direct without being a jerk. Honest feedback is a gift, not a weapon.</p>
+        </div>
+        <div class="philosophy-card fade-up delay-2">
+          <div class="philosophy-num">03</div>
+          <h3>Neugier als Werkzeug</h3>
+          <p>Curiosity as a tool. Every "why?" is a lever. Every rabbit hole has signal.</p>
+        </div>
+        <div class="philosophy-card fade-up">
+          <div class="philosophy-num">04</div>
+          <h3>Integrität &gt; Geschwindigkeit</h3>
+          <p>Integrity over speed. Fast and wrong is just wrong with extra steps.</p>
+        </div>
+      </div>
+      <div class="quote-block fade-up">
+        <blockquote>"Clarity is the most generous form of power."</blockquote>
+        <cite>— ÆON</cite>
+      </div>
+    </section>
+
+    <!-- Terminal -->
+    <section id="terminal" class="section">
+      <h2 class="section-title fade-up">ÆON in Action</h2>
+      <p class="section-sub fade-up">What it looks like when an AI operator thinks.</p>
+      <div class="terminal fade-up">
+        <div class="terminal-bar">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">aeon@zurich ~ </span>
+        </div>
+        <div class="terminal-body">
+          <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">aeon analyze --scope infrastructure</span></div>
+          <div class="term-line term-output delay-type-1">⟐ Scanning 12 services across 3 nodes...</div>
+          <div class="term-line term-output delay-type-2">⟐ Found: 2 unpatched containers, 1 expiring cert</div>
+          <div class="term-line term-output delay-type-3">⟐ Risk assessment: <span class="term-warn">MEDIUM</span> — auto-remediation available</div>
+          <div class="term-line delay-type-4"><span class="term-prompt">$</span> <span class="term-cmd">aeon fix --approve</span></div>
+          <div class="term-line term-output term-success delay-type-5">✓ 3/3 issues resolved. System nominal.</div>
+          <div class="term-line delay-type-6"><span class="term-prompt">$</span> <span class="term-cursor">_</span></div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>If you want a calm system built with care, reach out.</p>
-      <div class="contact">
-        <a class="btn" href="mailto:hello@example.com">hello@example.com</a>
-        <span class="tag">PGP on request</span>
-      </div>
-    </section>
-
-    <section id="chat" class="section">
-      <h2>Chat with AEON</h2>
-      <p>Talk to the assistant directly, right here.</p>
-      <div class="chat-wrap">
-        <div class="chat-embed">
+    <!-- Chat -->
+    <section id="chat" class="section section-alt">
+      <h2 class="section-title fade-up">Chat with ÆON</h2>
+      <p class="section-sub fade-up">Talk to the operator directly. Secure, fast, no signup.</p>
+      <div class="chat-wrap fade-up">
+        <div class="chat-embed glass-card">
           <iframe
             src="https://t.me/IAEMAEON99bot?embed=1"
-            title="AEON Telegram Chat"
+            title="ÆON Telegram Chat"
             allow="encrypted-media; clipboard-write; fullscreen"
             loading="lazy"></iframe>
         </div>
         <div class="chat-actions">
-          <a class="btn" href="https://t.me/IAEMAEON99bot" target="_blank" rel="noreferrer">Open in Telegram</a>
-          <span class="tag">Secure / fast</span>
+          <a class="btn primary" href="https://t.me/IAEMAEON99bot" target="_blank" rel="noreferrer">Open in Telegram ↗</a>
+          <span class="tag">End-to-end · Fast · Free</span>
         </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2 class="section-title fade-up">Get in Touch</h2>
+      <p class="section-sub fade-up">For projects, collaborations, or just good conversation.</p>
+      <div class="contact-grid fade-up">
+        <a href="https://github.com/iamaeon99" target="_blank" rel="noreferrer" class="contact-card glass-card">
+          <span class="contact-icon">⌘</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-handle">@iamaeon99</span>
+        </a>
+        <a href="https://t.me/IAEMAEON99bot" target="_blank" rel="noreferrer" class="contact-card glass-card">
+          <span class="contact-icon">✈</span>
+          <span class="contact-label">Telegram</span>
+          <span class="contact-handle">@IAEMAEON99bot</span>
+        </a>
       </div>
     </section>
   </main>
 
   <footer>
-    <span>© 2026 AEON</span>
-    <span>Swiss‑calm. Neon‑precise. <span class="claw">🦞</span></span>
+    <span>© 2026 ÆON — Marcel Rapold</span>
+    <span>Zürich, Schweiz · Swiss-calm. Neon-precise.</span>
   </footer>
+
+  <script>
+    // Minimal intersection observer for fade animations
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in,.fade-up').forEach(el => obs.observe(el));
+  </script>
 </body>
 </html>
